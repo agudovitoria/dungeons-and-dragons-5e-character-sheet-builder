@@ -1,11 +1,25 @@
 import {
+  BARBARIAN,
+  BARD,
+  CLASSES_AS_ARRAY,
+  CLERIC,
+  DRUID,
+  FIGHTER,
+  MONK,
+  PALADIN,
+  RANGER,
+  ROGUE,
+  SORCERER,
+  WARLOCK,
+  WIZARD
+} from './classes';
+import {
   DRAGONBORN,
   HILLS_DWARF,
   MOUNTAINS_DWARF,
   FOREST_ELF,
   HIGH_ELF,
   DARK_ELF,
-  GNOME,
   FOREST_GNOME,
   ROCK_GNOME,
   HALF_ELF,
@@ -18,7 +32,7 @@ import {
 
 
 
-export const STRONG = 'Fuerza';
+export const STRENGTH = 'Fuerza';
 export const DEXTERITY = 'Destreza';
 export const CONSTITUTION = 'Constitución';
 export const INTELLIGENCE = 'Inteligencia';
@@ -26,7 +40,7 @@ export const WISDOM = 'Sabiduría';
 export const CHARISMA = 'Carisma';
 
 export const STATS_AS_ARRAY = [
-  STRONG,
+  STRENGTH,
   DEXTERITY,
   CONSTITUTION,
   INTELLIGENCE,
@@ -35,9 +49,9 @@ export const STATS_AS_ARRAY = [
 ];
 
 export const STATS = {
-  [STRONG]: {
+  [STRENGTH]: {
     meaning: 'Capacidad atlética natural, potencial físico',
-    importantTo: ['bárbaro', 'guerrero', 'paladín'],
+    importantTo: [BARBARIAN, FIGHTER, PALADIN],
     raceBonus: {
       [MOUNTAINS_DWARF]: +2, 
       [DRAGONBORN]: +2, 
@@ -47,7 +61,7 @@ export const STATS = {
   },
   [DEXTERITY] :{
     meaning: 'Agilidad física, reflejos, equilibrio, compostura',
-    importantTo: ['monje', 'explorador', 'pícaro'],
+    importantTo: [MONK, RANGER, ROGUE],
     raceBonus: {
       [FOREST_ELF]: +2,
       [HIGH_ELF]: +2,
@@ -60,7 +74,7 @@ export const STATS = {
   },
   [CONSTITUTION]: {
     meaning: 'Salud, resistencia, fuerza vital',
-    importantTo: ['*'],
+    importantTo: CLASSES_AS_ARRAY,
     raceBonus: {
       [HILLS_DWARF]: +2,
       [MOUNTAINS_DWARF]: +2,
@@ -72,7 +86,7 @@ export const STATS = {
   },
   [INTELLIGENCE]: {
     meaning: 'Agilidad mental, memoria, capacidad analítica',
-    importantTo: ['mago'],
+    importantTo: [WIZARD],
     raceBonus: {
       [HIGH_ELF]: +1,
       [FOREST_GNOME]: +2,
@@ -83,7 +97,7 @@ export const STATS = {
   },
  [WISDOM]: {
     meaning: 'Consciencia, intuición, perspicacia',
-    importantTo: ['clérigo', 'druida'],
+    importantTo: [CLERIC, DRUID],
     raceBonus:{
       [HILLS_DWARF]: +1,
       [FOREST_ELF]: +1,
@@ -92,7 +106,7 @@ export const STATS = {
   },
   [CHARISMA]: {
     meaning: 'Confianza, elocuencia, liderazgo',
-    importantTo: ['bardo', 'hechicero', 'brujo'],
+    importantTo: [BARD, SORCERER, WARLOCK],
     raceBonus: {
       [HALF_ELF]: +2,
       [DARK_ELF]: +1,

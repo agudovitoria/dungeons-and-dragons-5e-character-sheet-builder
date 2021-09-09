@@ -1,0 +1,25 @@
+{
+  "default": {
+    "input-empty": "Introduce...",
+    "select-empty": "Selecciona..."
+  },
+  "character": {
+    "alignment": "Alineamiento",
+    "background": "Historia",
+    "character-name": "Nombre del personaje",
+    "charisma": "Carisma",
+    "class-and-level": "Clase y nivel",
+    "constitution": "Constitución",
+    "dexterity": "Destreza",
+    "experience-points": "Puntos de experiencia",
+    "inspiration": "Inspiración",
+    "intelligence": "Inteligencia",
+    "other-profs": "Otras habilidades e idiomas",
+    "perception": "Percepciòn",
+    "proficiency-bonus": "Bonificador de competencia",
+    "player-name": "Nombre del jugador",
+    "race": "Raza",
+    "strength": "Fuerza",
+    "wisdom": "Sabiduría"
+  }
+}

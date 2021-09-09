@@ -25,30 +25,7 @@ export const HUMAN = 'Humano';
 
 export const TIEFLING = 'Tiflin';
 
-export const RACES = [
-  DRAGONBORN,
-  DWARF,
-  ELF,
-  GNOME,
-  HALF_ELF,
-  HALF_ORC,
-  HUMAN,
-  TIEFLING
-];
-
-export const SUBRACES = {
-  DRAGONBORN: [],
-  DWARF: [HILLS_DWARF, MOUNTAINS_DWARF],
-  ELF: [FOREST_ELF, HIGH_ELF, DARK_ELF],
-  GNOME: [FOREST_GNOME, ROCK_GNOME],
-  HALF_ELF: [],
-  HALF_ORC: [],
-  HALFLING: [LIGHTFOOT_HALFLING, STOUT_HALFLING],
-  HUMAN: [],
-  TIEFLING: []
-};
-
-export const SUBRACES_AS_ARRAY = [
+export const RACES_AS_ARRAY = [
   DRAGONBORN,
   HILLS_DWARF,
   MOUNTAINS_DWARF,

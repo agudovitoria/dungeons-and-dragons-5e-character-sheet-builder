@@ -1,19 +1,4 @@
 import {
-  BARBARIAN,
-  BARD,
-  CLASSES_AS_ARRAY,
-  CLERIC,
-  DRUID,
-  FIGHTER,
-  MONK,
-  PALADIN,
-  RANGER,
-  ROGUE,
-  SORCERER,
-  WARLOCK,
-  WIZARD
-} from './classes';
-import {
   DRAGONBORN,
   HILLS_DWARF,
   MOUNTAINS_DWARF,
@@ -51,7 +36,6 @@ export const STATS_AS_ARRAY = [
 export const STATS = {
   [STRENGTH]: {
     meaning: 'Capacidad atlética natural, potencial físico',
-    importantTo: [BARBARIAN, FIGHTER, PALADIN],
     raceBonus: {
       [MOUNTAINS_DWARF]: +2, 
       [DRAGONBORN]: +2, 
@@ -61,7 +45,6 @@ export const STATS = {
   },
   [DEXTERITY] :{
     meaning: 'Agilidad física, reflejos, equilibrio, compostura',
-    importantTo: [MONK, RANGER, ROGUE],
     raceBonus: {
       [FOREST_ELF]: +2,
       [HIGH_ELF]: +2,
@@ -74,7 +57,6 @@ export const STATS = {
   },
   [CONSTITUTION]: {
     meaning: 'Salud, resistencia, fuerza vital',
-    importantTo: CLASSES_AS_ARRAY,
     raceBonus: {
       [HILLS_DWARF]: +2,
       [MOUNTAINS_DWARF]: +2,
@@ -86,7 +68,6 @@ export const STATS = {
   },
   [INTELLIGENCE]: {
     meaning: 'Agilidad mental, memoria, capacidad analítica',
-    importantTo: [WIZARD],
     raceBonus: {
       [HIGH_ELF]: +1,
       [FOREST_GNOME]: +2,
@@ -97,7 +78,6 @@ export const STATS = {
   },
  [WISDOM]: {
     meaning: 'Consciencia, intuición, perspicacia',
-    importantTo: [CLERIC, DRUID],
     raceBonus:{
       [HILLS_DWARF]: +1,
       [FOREST_ELF]: +1,
@@ -106,7 +86,6 @@ export const STATS = {
   },
   [CHARISMA]: {
     meaning: 'Confianza, elocuencia, liderazgo',
-    importantTo: [BARD, SORCERER, WARLOCK],
     raceBonus: {
       [HALF_ELF]: +2,
       [DARK_ELF]: +1,

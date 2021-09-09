@@ -1,0 +1,25 @@
+{
+  "default": {
+    "input-empty": "Write one...",
+    "select-empty": "Select one..."
+  },
+  "character": {
+    "alignment": "Alignment",
+    "background": "Background",
+    "class-and-level": "Class and Level",
+    "character-name": "Character Name",
+    "charisma": "Charisma",
+    "constitution": "Constitution",
+    "dexterity": "Dexterity",
+    "experience-points": "Experience Points",
+    "inspiration": "Inspiration",
+    "intelligence": "Intelligence",
+    "other-profs": "Other Proficiencies and Languages",
+    "perception": "Perception",
+    "proficiency-bonus": "Proficiency Bonus",
+    "player-name": "Player Name",
+    "race": "Race",
+    "strength": "Strength",
+    "wisdom": "Wisdom"
+  }
+}

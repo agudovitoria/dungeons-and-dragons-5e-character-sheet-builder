@@ -1,5 +1,7 @@
 $sheet-width: 800px
 $bg: white
+$selectBg: #DDDDDD
+$hoveredSelectBg: #acacac
 $faded: #ddd
 $faded-light: #eee
 $faded-dark: #bbb
@@ -80,6 +82,22 @@ form.charsheet
     display: flex
     align-contents: stretch
     align-items: stretch
+
+    select
+      margin-right: 4px
+      border: none
+      -moz-appearance: none
+      -webkit-appearance: none
+      appearance: none
+      background-color: $selectBg
+
+      &:hover
+        cursor: pointer
+        background-color: $hoveredSelectBg
+      
+      &:focus,
+      &:focus-visible
+        outline: none
     
     section.charname
       border: 1px solid black

@@ -17,12 +17,12 @@ import {
 
 
 
-export const STRENGTH = 'Fuerza';
-export const DEXTERITY = 'Destreza';
-export const CONSTITUTION = 'Constitución';
-export const INTELLIGENCE = 'Inteligencia';
-export const WISDOM = 'Sabiduría';
-export const CHARISMA = 'Carisma';
+export const STRENGTH = 'strength';
+export const DEXTERITY = 'dexterity';
+export const CONSTITUTION = 'constitution';
+export const INTELLIGENCE = 'intelligence';
+export const WISDOM = 'wisdom';
+export const CHARISMA = 'charisma';
 
 export const STATS_AS_ARRAY = [
   STRENGTH,

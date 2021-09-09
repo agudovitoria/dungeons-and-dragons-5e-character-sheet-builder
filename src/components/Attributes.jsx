@@ -8,49 +8,53 @@ import { Proficiency } from './Proficiency';
 import { Strength } from './Strength';
 import { Wisdom } from './Wisdom';
 
-export const Attributes = ({ attributes, translate }) => {
+export const Attributes = ({
+  attributes,
+  modifiers,
+  translate
+}) => {
   return (
     <section className="attributes">
       <div className="scores">
         <ul>
           <li>
             <Strength
-              modifier={0}
+              modifier={modifiers.strength}
               translate={translate}
               value={attributes.strength}
             />
           </li>
           <li>
             <Dexterity
-              modifier={0}
+              modifier={modifiers.dexterity}
               translate={translate}
               value={attributes.dexterity}
             />
           </li>
           <li>
             <Constitution
-              modifier={0}
+              modifier={modifiers.constitution}
               translate={translate}
               value={attributes.constitution}
             />
           </li>
           <li>
             <Wisdom
-              modifier={0}
+              modifier={modifiers.wisdom}
               translate={translate}
               value={attributes.wisdom}
             />
           </li>
           <li>
             <Intelligence
-              modifier={0}
+              modifier={modifiers.intelligence}
               translate={translate}
               value={attributes.intelligence}
             />
           </li>
           <li>
             <Charisma
-              modifier={0}
+              modifier={modifiers.charisma}
               translate={translate}
               value={attributes.charisma}
             />

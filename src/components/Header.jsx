@@ -21,13 +21,26 @@ import {
   Race
 } from './Race';
 
-export const Header = ({ character, translate }) => (
+export const Header = ({
+  character,
+  onAlignmentChange,
+  onClassChange,
+  onNameChange,
+  onRaceChange,
+  translate
+}) => (
   <header>
-    <CharacterName translate={translate} />
+    <CharacterName
+      onChange={onNameChange}
+      translate={translate}
+    />
     <section className="misc">
       <ul>
         <li>
-          <ClassAndLevel translate={translate} />
+          <ClassAndLevel
+            onChange={selectedClass => onClassChange(selectedClass)}
+            translate={translate}
+          />
         </li>
         <li>
           <Background translate={translate} />
@@ -36,10 +49,16 @@ export const Header = ({ character, translate }) => (
           <PlayerName translate={translate} />
         </li>
         <li>
-          <Race translate={translate} />
+          <Race
+            onChange={selectedRace => onRaceChange(selectedRace)}
+            translate={translate}
+          />
         </li>
         <li>
-          <Alignment translate={translate} />
+          <Alignment
+            onChange={selectedAlignment => onAlignmentChange(selectedAlignment)}
+            translate={translate}
+          />
         </li>
         <li>
           <ExperiencePoints

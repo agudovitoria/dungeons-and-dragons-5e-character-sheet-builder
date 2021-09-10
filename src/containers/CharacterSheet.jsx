@@ -33,31 +33,26 @@ import {
 import {
   OtherProfs
 } from './OtherProfs';
+
 import {
-  getStatsByRace
-} from '../engine/stats';
+  setAlignmentAction,
+  setClassAction,
+  setNameAction,
+  setRaceAction
+} from '../state/actions/characterActions';
 
 export const CharacterSheet = () => {
   const { t } = useTranslation('common');
-  const character = useContext(characterContext);
-
-  const onAlignmentChange = selectedAlignment => character.setAlignment(selectedAlignment);
-  const onClassChange = selectedClass => character.setClass(selectedClass);
-  const onNameChange = name => character.setName(name);
-  const onRaceChange = selectedRace => {
-    character.setRace(selectedRace);
-    const statsByRace = getStatsByRace(selectedRace);
-    character.setModifiers(statsByRace);
-  };
+  const [character, dispatch] = useContext(characterContext);
 
   return (
     <form className="charsheet">
       <Header
         character={character}
-        onAlignmentChange={onAlignmentChange}
-        onClassChange={onClassChange}
-        onNameChange={onNameChange}
-        onRaceChange={onRaceChange}
+        onAlignmentChange={selectedAlignment => dispatch(setAlignmentAction(selectedAlignment))}
+        onClassChange={selectedClass => dispatch(setClassAction(selectedClass))}
+        onNameChange={name => dispatch(setNameAction(name))}
+        onRaceChange={selectedRace => dispatch(setRaceAction(selectedRace))}
         translate={t}
       />
       <main>
